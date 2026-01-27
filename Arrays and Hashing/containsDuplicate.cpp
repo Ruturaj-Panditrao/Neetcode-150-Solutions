@@ -4,9 +4,9 @@ class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
         // O(N^2) loop -> TLE 
-        // set maintain -> O(NlogN) Time + O(N) Space
+        // unordered set maintain -> O(NlogN) Time + O(N) Space
         // sort nums[i] == nums[i+1] -> Time O(NlogN) + O(N)
-        // set size compared at end -> roughly O(N) time + O(N) space
+        // unordered set size compared at end -> roughly O(N) time + O(N) space
         
         int n = nums.size();
 
@@ -19,7 +19,7 @@ public:
         // }
         // return false;
 
-        // set<int>numbers;
+        // unordered_set<int>numbers;
         // for(int i=0; i<n; i++){
         //     if(numbers.find(nums[i])==numbers.end()){
         //         numbers.insert(nums[i]);
@@ -33,9 +33,9 @@ public:
         //     return true;
         // } return false;
         
-        set<int>numbers;
-        for(auto i : nums) numbers.insert(i);
-        return numbers.size()!=nums.size();
+        // unordered_set<int>numbers;
+        // for(auto i : nums) numbers.insert(i);
+        // return numbers.size()!=nums.size();
 
     }
 };
