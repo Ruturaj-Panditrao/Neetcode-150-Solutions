@@ -4,7 +4,7 @@ class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
         // O(N^2) loop -> TLE 
-        // unordered set maintain -> O(NlogN) Time + O(N) Space
+        // unordered set maintain -> O(N) Time + O(N) Space
         // sort nums[i] == nums[i+1] -> Time O(NlogN) + O(N)
         // unordered set size compared at end -> roughly O(N) time + O(N) space
         
